@@ -1,9 +1,9 @@
 (:name tuareg-mode
        :type git
-       :url "git://github.com/emacsmirror/tuareg.git"
+       :url "https://github.com/emacsmirror/tuareg.git"
        :load-path (".")
        :build ("make elc")
-       :after
+       :post-init
        (lambda ()
          (add-to-list 'auto-mode-alist '("\\.ml[iylp]?" . tuareg-mode))
          (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
